@@ -84,9 +84,9 @@ print('Test accuracy:', score[1])
 model.save(r'../captcha.h5')
 #可视化模型
 from keras.utils.vis_utils import plot_model
-plot_model(model, to_file="../model.png", show_shapes=True)
+plot_model(model, to_file="../image/model_cnn.png", show_shapes=True)
 #打开图片
-img = Image.open(r'../model.png')
+img = Image.open(r'../image/model_cnn.png')
 plt.imshow(img)
 plt.show()
 
