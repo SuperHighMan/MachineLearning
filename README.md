@@ -3,7 +3,21 @@
 在之前做验证码识别的阶段，已经使用了SVM向量机的方法实现了数字验证码的识别。
 开本工程的想法在于：使用验证码处理这一切入口，来进行Machine Learning的学习。
 
-## 一、Keras库
+## 一、numpy库
+知道axis, 即维度，从0维开始
+```python
+import numpy as np
+
+a = np.array([[1,2],[3,4]])
+r1 = np.stack(a, axis=0)
+r2 = np.stack(a, axis=1)
+
+print(r1)
+print(r2)
+
+```
+
+## 二、Keras库
 Keras库依赖backend, 使用TensorFlow或者Theano
 
 >Centos6.4安装TensorFlow后,运行时会有如下报错:
@@ -15,9 +29,11 @@ Keras库依赖backend, 使用TensorFlow或者Theano
 ### 1. CNN神经卷积网络
 
 图片打码分类：
+
 ![index](https://github.com/SuperHighMan/MachineLearning/raw/master/image/crack_sample.png)
 
 模型:
+
 ![index](https://github.com/SuperHighMan/MachineLearning/raw/master/image/model_cnn.png)
 
 训练输出：
@@ -70,3 +86,4 @@ Test accuracy: 1.0
 ## 感谢
 1. [使用 Keras 来破解 captcha 验证码](https://ypw.io/captcha/) https://ypw.io/captcha/
 2. [卷积神经网络识别验证码模拟登录正方教务系统的尝试](http://www.jianshu.com/p/479dff9a599d) http://www.jianshu.com/p/479dff9a599d
+3. [mnist_cnn](https://github.com/fchollet/keras/blob/master/examples/mnist_cnn.py) https://github.com/fchollet/keras/blob/master/examples/mnist_cnn.py
