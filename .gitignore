@@ -1,0 +1,7 @@
+/__*
+/crack*
+*.jpg
+/*.h5
+/mnist_cnn.py
+*.gif
+!/image

@@ -92,6 +92,6 @@ model.save(r'../captcha.h5')
 from keras.utils.vis_utils import plot_model
 plot_model(model, to_file="../image/model_cnn.png", show_shapes=True)
 #打开图片
-img = Image.open(r'../image/model_cnn.png')
-plt.imshow(img)
-plt.show()
+#img = Image.open(r'../image/model_cnn.png')
+#plt.imshow(img)
+#plt.show()

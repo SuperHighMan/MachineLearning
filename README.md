@@ -28,15 +28,15 @@ Keras库依赖backend, 使用TensorFlow或者Theano
 
 ### 1. CNN神经卷积网络
 
-图片打码分类：
+1. 图片打码分类：
 
 ![index](https://github.com/SuperHighMan/MachineLearning/raw/master/image/crack_sample.png)
 
-模型:
+2. 模型:
 
 ![index](https://github.com/SuperHighMan/MachineLearning/raw/master/image/model_cnn.png)
 
-训练输出：
+3. 训练输出：
 ```
 (pyenv3.6)$ python3 mykeras.py 
 Using TensorFlow backend.
@@ -77,6 +77,8 @@ Test accuracy: 1.0
 
 ```
 
+4. 预测识别
+文件my_cnn_predict.py为预测使用的脚本。
 
 
 
@@ -84,6 +86,6 @@ Test accuracy: 1.0
 
 
 ## 感谢
-1. [使用 Keras 来破解 captcha 验证码](https://ypw.io/captcha/) https://ypw.io/captcha/
-2. [卷积神经网络识别验证码模拟登录正方教务系统的尝试](http://www.jianshu.com/p/479dff9a599d) http://www.jianshu.com/p/479dff9a599d
-3. [mnist_cnn](https://github.com/fchollet/keras/blob/master/examples/mnist_cnn.py) https://github.com/fchollet/keras/blob/master/examples/mnist_cnn.py
+1. 使用 Keras 来破解 captcha 验证码 https://ypw.io/captcha/
+2. 卷积神经网络识别验证码模拟登录正方教务系统的尝试 http://www.jianshu.com/p/479dff9a599d
+3. mnist_cnn https://github.com/fchollet/keras/blob/master/examples/mnist_cnn.py
