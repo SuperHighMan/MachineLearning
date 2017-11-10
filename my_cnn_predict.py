@@ -16,6 +16,8 @@ import numpy as np
 import os
 from PIL import Image
 from my_cnn import img_rows,img_cols, CHRS
+from my_ui import TestFrame
+import tkinter as tk
 
 MODEL = os.environ['HOME'] + r'/tensorflow/captcha.h5'
 
@@ -51,7 +53,24 @@ def test():
         value = predict_image(img)
         print('%s : %s' %(f, value))
 
+
+def ui_test():
+    value = []
+    parent_path = os.path.join(os.environ['HOME'], 'tensorflow/predict')
+    os.chdir(parent_path)
+    images = os.listdir(parent_path)
+    for f in images:
+        img = Image.open(f)
+        value.append(predict_image(img))
+    root = tk.Tk()
+    ui = TestFrame(root, nums=5)
+    ui.addPicture(images, value)
+    root.bind('<Return>', ui.nextPage)
+    root.mainloop()
+
+
 if __name__=='__main__':
     print('Start predict...')
     test()
+    ui_test()
     print('Thanks for testing...')

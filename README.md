@@ -78,7 +78,8 @@ Test accuracy: 1.0
 ```
 
 4. 预测识别
-文件my_cnn_predict.py为预测使用的脚本。
+
+文件my_cnn_predict.py为预测使用的脚本,通过tkinter实现了破解的展示。
 
 
 
